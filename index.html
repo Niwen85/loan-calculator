@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="slider">Hur mycket vill du låna</label>
+
+    <div id='slider'>
+        <input type="range" id=slider value="1" step="5000" min="5000" max="600000" oninput="sliderChange(this.value)"
+            class="slider" id="slider">
+
+        <output id="sliderVal"></output>
+
+
+        <div id=time>
+            <input type="range" min="1" max="20" value="1" step="1" class="slider" id="time"
+                oninput="sliderChange2(this.value)">
+            <output id="sliderVal2"></output>
+
+
+        </div>
+        <label for=" time">återbetalnings tid</label>
+
+
+        <script src="app.js"></script>
+</body>
+
+</html>
