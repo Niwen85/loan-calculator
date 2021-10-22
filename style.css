@@ -1,0 +1,16 @@
+.interests{
+    margin-top: 30px;
+    display: flex;
+}
+#sliders{
+ display: flex;
+ align-items: flex-start;   
+}
+.time{
+    display: flex;
+    align-items: flex-end;
+}
+.calculator{
+    width: auto;
+    height: auto;
+}

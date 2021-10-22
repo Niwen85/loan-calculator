@@ -12,25 +12,53 @@
 <body>
 
     <label for="slider">Hur mycket vill du låna</label>
+    <div class=calculator>
 
-    <div id='slider'>
-        <input type="range" id=slider value="1" step="5000" min="5000" max="600000" oninput="sliderChange(this.value)"
-            class="slider" id="slider">
+        <div id='sliders'>
+            <input type="range" id=slider value="1" step="5000" min="5000" max="600000"
+                oninput="sliderChange(this.value)" class="slider" id="slider">
 
-        <output id="sliderVal"></output>
-
-
-        <div id=time>
-            <input type="range" min="1" max="20" value="1" step="1" class="slider" id="time"
-                oninput="sliderChange2(this.value)">
-            <output id="sliderVal2"></output>
-
-
+            <input type="text" id="sliderVal" value="5000"></input>
         </div>
-        <label for=" time">återbetalnings tid</label>
 
+        <div id=timebox>
+            <input type="range" min="0" max="19" value="0" step="1" class="slider" id="time"
+                oninput="sliderChange2(this.value)">
+            <select name="years" id="years" onchange="timeDropBox(this.options[this.selectedIndex])">
+                <option value="1">1 år</option>
+                <option value="2">2 år</option>
+                <option value="3">3 år</option>
+                <option value="4">4 år</option>
+                <option value="5">5 år</option>
+                <option value="6">6 år</option>
+                <option value="7">7 år</option>
+                <option value="8">8 år</option>
+                <option value="9">9 år</option>
+                <option value="10">10 år</option>
+                <option value="11">11 år</option>
+                <option value="12">12 år</option>
+                <option value="13">13 år</option>
+                <option value="14">14 år</option>
+                <option value="15">15 år</option>
+                <option value="16">16 år</option>
+                <option value="17">17 år</option>
+                <option value="18">18 år</option>
+                <option value="19">19 år</option>
+                <option value="20">20 år</option>
+            </select>
+        </div>
+    </div>
 
-        <script src="app.js"></script>
+    <label for=" time">återbetalnings tid</label>
+    <div class=interests>
+        <p>
+            Månadskostnad
+            <output class="kostnad"></output>
+        </p>
+
+    </div>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
